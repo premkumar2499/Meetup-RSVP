@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     .register-box{
         display: flex;
@@ -45,7 +45,7 @@
                 .box-footer{
                     width: 80%;
                     align-self: center;
-                    button{
+                    .active{
                         width: 100%;
                         padding: 1rem;
                         cursor: pointer;
@@ -56,14 +56,32 @@
                         font-size: 1.2rem;
                         border-radius: 1.4rem;
                     }
-                    // button:hover{
-                    //     color: black;
-                    //     background-color: lightgreen;
-                    //     border: 1px solid black;
-                    // }
+                    .disabled{
+                        pointer-events: none;
+                        width: 100%;
+                        padding: 1rem;
+                        cursor: pointer;
+                        background-color: #aaaaaa;
+                        border: none;
+                        color: white;
+                        letter-spacing: .2rem;
+                        font-size: 1.2rem;
+                        border-radius: 1.4rem;
+                    }
                 }
             }
         }
     }
 }
-
+@media (min-width:0px) and (max-width:768px)
+{    .container{
+      padding:25rem 0;
+    .register-box{
+        width:90%;
+        margin:10rem 0;
+        .box-main{
+            .register-form{
+             padding:1rem 0;
+        }
+    }}}
+}

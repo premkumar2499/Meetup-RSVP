@@ -1,13 +1,13 @@
 import './AlertBox.scss';
 
-const AlertBox = () =>{
+const AlertBox = ({error,handleOpen}) =>{
     return(
         <div className="alert-container">
             <div className="alert-box">
-                <p>Do you want  to exit ?</p>
+                <p>{error}</p>
                 <div className="alert-items">
-                    <button className="btn1">Yes</button>
-                    <button className="btn2">No</button>
+                    <button className="btn1" onClick={handleOpen}>OK</button>
+                    {/* <button className="btn2">No</button> */}
                 </div>
             </div>
         </div>

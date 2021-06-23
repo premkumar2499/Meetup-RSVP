@@ -1,0 +1,48 @@
+.report-container{
+    height: 87vh;
+    .drop-down{
+        display: flex;
+        width: 70%;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0.5rem auto;
+        p{
+            font-size: 1rem;
+            margin-right: 1rem;
+        }
+        .select{
+            padding: 0.7rem;
+            font-size: 1.2rem;
+            background-color: transparent;
+            border: 2px solid black;
+        }
+    }
+    .chart{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width:0px) and (max-width:768px)
+{
+    .report-container{
+        padding: 3rem;
+        .drop-down{
+            width:100%;
+            
+            p{
+                font-size: 1rem;
+                margin-right:0.5rem;
+            }
+            .select{
+                font-size: 1rem;
+                border: 1px solid black;
+            }
+        }
+        .chart{
+            width:10%;
+        }
+    }
+
+}
