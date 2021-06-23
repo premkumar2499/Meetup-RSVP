@@ -1,0 +1,51 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+  }
+  .navbar{
+    display: flex;
+    position: fixed;
+    font-size: 2rem;
+    border-bottom: 1.5px solid black;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    background-color: white;
+    .nav-brand{
+      padding: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      .navbar-toggler{
+          font-size: 1.3rem;
+          background-color: white;
+          border: 1px solid black;
+          border-radius: 0.4rem;
+          padding: 0.6rem;
+          cursor: pointer;
+      }
+  }
+  .nav-title{
+    text-align: center;
+    padding-left: 3rem;
+    .navbar-brand{
+        font-size: 3rem;
+        text-decoration: none;
+        color: black;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar{
+    .nav-title{
+      padding-left: 0.5rem;
+    }
+  }
+  
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
