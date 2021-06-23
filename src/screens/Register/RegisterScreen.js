@@ -1,14 +1,26 @@
+import { useState } from 'react';
 import './RegisterScreen.scss';
-
+import AlertBox from '../../components/AlertBox/AlertBox'
 const RegisterScreen = () =>{
+
+    const [isOPen,setIsOpen] = useState(false);
+
+    const handleAlert = (e) =>{
+        e.preventDefault();
+        setIsOpen(!isOPen);
+    }
     return(
-        <div className="container">
+        <>
+        { isOPen ? (
+            <AlertBox/>
+        ) : (
+            <div className="container">
             <div className="register-box">
                 <div className="box-header">
                     <h3>Register for RSVP</h3>
                 </div>
                 <div className="box-main">
-                    <form className="register-form">
+                    <form className="register-form" onSubmit={handleAlert}>
                         <label htmlFor="name">Name</label>
                         <input type="text" className="input-field" placeholder="Enter your name" id="name"/>
                         <label htmlFor="name">Age</label>
@@ -36,9 +48,12 @@ const RegisterScreen = () =>{
                         </div>
                     </form>
                 </div>
-                
             </div>
         </div>
+
+        )}
+        
+    </>
     )
 }
 
